@@ -1,14 +1,14 @@
 package com.atividade.A2.Model;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+import java.math.BigDecimal;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
-import java.math.BigDecimal;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class ItemPedido {
@@ -28,7 +28,6 @@ public class ItemPedido {
     private int quantidade;
     private BigDecimal precoUnitario;
 
-    // Construtores
     public ItemPedido() {}
 
     public ItemPedido(Pedido pedido, Produto produto, int quantidade, BigDecimal precoUnitario) {
@@ -38,7 +37,6 @@ public class ItemPedido {
         this.precoUnitario = precoUnitario;
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
